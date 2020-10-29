@@ -36,5 +36,28 @@ function cumulativeSum(retArr) {
   return final; // return new array
 }
 
-console.log(cumulativeSum(primeGen(100)));
+function maxPrimeSum(num) {
+  let maxPrime = 0;
+  let maxCount = 0;
+  let temp = [];
+  const listOfPrimes = primeGen(num); // generate list of primes
+
+  while (listOfPrimes.length > 0) { // While the list is not empty
+    const listOfSums = cumulativeSum(listOfPrimes); // generate list of cumulative sums
+    temp = _.intersection(listOfPrimes, listOfSums); // find elements that the 2 lists share
+    const i = temp.pop(); // Get the greatest number off the array
+    const j = (_.indexOf(listOfSums, i) + 1);
+    if (i > maxPrime && j > maxCount) { // if the array is empty -> false
+      maxPrime = i;
+      maxCount = j;
+    }
+    temp = []; // clear temp
+    listOfPrimes.shift(); // Try again with a list of primes that is smaller
+  }
+
+  return ([maxPrime, maxCount]);
+}
+
 console.log(primeGen(100));
+console.log(cumulativeSum(primeGen(100)));
+console.log(maxPrimeSum(100));

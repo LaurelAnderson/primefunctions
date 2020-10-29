@@ -21,4 +21,20 @@ function primeGen(num) {
   return _.without(retArr, 0); // get rid of 0s
 }
 
+function cumulativeSum(retArr) {
+  let temp = 0;
+  const final = [];
+
+  for (let i = 0; i < retArr.length; i++) { // iterate through the list
+    for (let j = 0; j <= i; j++) { // add all values before it
+      temp += retArr[j];
+    }
+    final.push(temp); // push on to a new array
+    temp = 0;
+  }
+
+  return final; // return new array
+}
+
+console.log(cumulativeSum(primeGen(100)));
 console.log(primeGen(100));

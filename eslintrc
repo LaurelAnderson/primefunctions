@@ -5,6 +5,7 @@
 		"sourceType": "module"
 	},
 	"rules": {
+    "max-classes-per-file": ["error", 100],
 		"max-len": ["error", 120],
 		"no-console": "off",
 		"prefer-arrow-callback": "off",
@@ -14,6 +15,12 @@
 		"no-restricted-syntax": "off"
 	},
 	"globals": {
-		"_": true
-	}
+		"_": true,
+    "chai": true
+	},
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  }
 }

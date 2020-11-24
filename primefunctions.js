@@ -1,5 +1,3 @@
-// CS 320 - Homework 4 Laurel Anderson
-
 const _ = require('underscore');
 
 function primeGen(num) {

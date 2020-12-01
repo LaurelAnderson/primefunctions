@@ -3,11 +3,9 @@ var _ = require('underscore');
 
 function primeGen(num) {
   const retArr = [];
-  for (let i = 0; i < num; i++) { // create a list of all number from 1 - num
+  for (let i = 1; i < num; i++) { // create a list of all number from 1 - num
     retArr.push(i + 1);
   }
-
-  retArr.shift(); // get rid of 1
 
   for (let j = 0; j <= num - 1; j++) { // iterate through the numbers
     for (let k = j + 1; k < num - 1; k++) { // start at a index and check all nums after
@@ -61,3 +59,7 @@ function maxPrimeSum(num) {
 console.log(primeGen(100));
 console.log(cumulativeSum([1, 2, 3, 4]));
 console.log(maxPrimeSum(100));
+
+/* Optimization 1: Replaced the retArr.length line 26 to a const var that was declared
+before the loop. Changed test1 from 4ms to 2ms and test2 from 35ms to 28 ms. */
+/* Optimization 2: Got rid of the retArr.shift(); at line 10 and adjusted the loop. Changed test2 to 16ms */

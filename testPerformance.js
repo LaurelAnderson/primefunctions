@@ -1,5 +1,5 @@
 /*  global maxPrimeSum */
-
+/* Because of the slowness of the code, the tests were changed to 100 and 1000 */
 describe('Test for Correctness', function () {
   const values1 = [41, 6];
   const values2 = [953, 21];

@@ -1,4 +1,4 @@
-/*  global primeGen, cumulativeSum */
+/*  global primeGen, cumulativeSum, maxPrimeSum */
 
 describe('Test for Correctness', function () {
   const values1 = [2, 3, 5, 7];
@@ -20,6 +20,17 @@ describe('Test for Correctness', function () {
     });
     it('returned [10, 21, 33, 46, 60] for cumulativeSum([10, 11, 12, 13, 14])', function () {
       chai.expect(cumulativeSum([10, 11, 12, 13, 14])).to.deep.equal(values4);
+    });
+  });
+
+  const values5 = [41, 6];
+  const values6 = [953, 21];
+  describe('maxPrimeSum()', function () {
+    it('returned [41, 6] for maxPrimeSum(100)', function () {
+      chai.expect(maxPrimeSum(100)).to.deep.equal(values5);
+    });
+    it('returned [956, 21] for maxPrimeSum(1000)', function () {
+      chai.expect(maxPrimeSum(1000)).to.deep.equal(values6);
     });
   });
 });

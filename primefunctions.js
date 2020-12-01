@@ -1,3 +1,4 @@
+/* eslint no-var: 0 */
 var _ = require('underscore');
 
 function primeGen(num) {

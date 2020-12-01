@@ -1,4 +1,4 @@
-const _ = require('underscore');
+var _ = require('underscore');
 
 function primeGen(num) {
   const retArr = [];

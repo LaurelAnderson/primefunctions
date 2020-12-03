@@ -61,5 +61,6 @@ console.log(cumulativeSum([1, 2, 3, 4]));
 console.log(maxPrimeSum(100));
 
 /* Optimization 1: Replaced the retArr.length line 26 to a const var that was declared
-before the loop. Changed test1 from 4ms to 2ms and test2 from 35ms to 28 ms. */
+before the loop. Tested 100 for test1 and 1000 for test2. Changed test1 from 4ms to 2ms and test2 from
+35ms to 28 ms. */
 /* Optimization 2: Got rid of the retArr.shift(); at line 10 and adjusted the loop. Changed test2 to 16ms */

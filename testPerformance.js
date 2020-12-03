@@ -10,7 +10,6 @@ describe('Test for Correctness', function () {
     });
     it('maxPrimeSum(10000) should run in less than 40ms', function () {
       this.timeout(40);
-      // this.slow(0);
       chai.expect(maxPrimeSum(1000)).to.deep.equal(values2);
     });
   });
